@@ -93,7 +93,7 @@ class Canvas {
   pg1() {
     // layers of pg1 (text beneath the window)
     this.pg1a.clear();
-    this.pg1a.image(gradientBackground, 0, 0);
+    this.pg1a.image(bgGradient, 0, 0);
     this.textParticlesInLiquid.applyLiquid(this.pg1a);
     this.textParticlesInLiquid.run(this.pg1a);
     // also contains images of singers
@@ -113,15 +113,15 @@ class Canvas {
     }
     this.pg1b.clear();
     this.pg1b.tint(255, 230);
-    this.pg1b.image(transparentWindow, 0, 0);
+    this.pg1b.image(bgClearWindow, 0, 0);
   }
   pg2() {
     // layers of pg2 (text above the window)
     this.pg2a.clear();
-    this.pg2a.image(gradientBackground, 0, 0);
+    this.pg2a.image(bgGradient, 0, 0);
     this.pg2b.clear();
     this.pg2b.tint(255, 230);
-    this.pg2b.image(transparentWindow, 0, 0);
+    this.pg2b.image(bgClearWindow, 0, 0);
     this.textParticlesInLiquid.applyLiquid(this.pg2b);
     this.textParticlesInLiquid.run(this.pg2b);
   }

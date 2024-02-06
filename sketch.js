@@ -11,14 +11,14 @@ P5Capture.setDefaultOptions({
 
 function preload() {
   font = loadFont("Arial Black.ttf");
-  gradientBackground = loadImage("img/coloured window.png");
-  transparentWindow = loadImage("img/abt poster transparent window.png");
-  logo = loadImage("img/fullLogo.png");
-  logoColumn = loadImage("img/column.png");
+  bgGradient = loadImage("img/bgGradient.png");
+  bgClearWindow = loadImage("img/bgClearWindow.png");
+  logo = loadImage("img/logo.png");
+  logoColumn = loadImage("img/logoColumn.png");
   logoNoColumn = loadImage("img/logoNoColumn.png");
   emojiPic = [];
   for (let i = 0; i < 3; i++) {
-    emojiPic[i] = loadImage("img/shape" + (i + 1) + ".png");
+    emojiPic[i] = loadImage("img/emojiPic" + i + ".png");
   }
   singersPic = [];
   for (let i = 0; i < 5; i++) {
