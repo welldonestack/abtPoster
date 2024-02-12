@@ -52,7 +52,9 @@ class TextParticles {
         this.mover[i][j].applyForce(force);
         this.mover[i][j].update();
         this.mover[i][j].show(pg, 200);
+        
         // this.mover[i][j].checkEdges(pg);
+        
       }
     }
   }

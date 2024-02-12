@@ -55,14 +55,27 @@ class Vehicle {
 
   show(pg, emoji, alphaValue) {
     // Draw a triangle rotated in the direction of velocity
-    let angle = this.velocity.heading();
+    // let angle = this.velocity.heading();
     pg.push();
     pg.translate(this.position.x, this.position.y);
     // pg.rotate(angle);
     pg.tint(255, this.alphaValue);
+    pg.imageMode(CENTER);
     pg.image(emoji, 0, 0, this.w, this.h);
     pg.pop();
   }
 
+  
+  checkEdges(resetX, resetY, endX, endY) {
+    if (this.position.x < endX) {
+      this.position.x = resetX;
+    }
+
+    if (this.position.y > endY) {
+      this.position.y = resetY;
+    } else if (this.position.y < resetY) {
+      this.position.y = endY;
+    }
+  }
   
 }
